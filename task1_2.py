@@ -3,7 +3,7 @@
 # ✔ Вычислите итоговую прибыль или убыток каждой компании. Если все компании
 # прибыльные, верните истину, а если хотя бы одна убыточная — ложь.
 
-def get_profit_loss(companies: dict[str:list[int]]) -> dict[str:int] and bool:
+def get_profit_loss(companies: dict[str:list[int]]) -> tuple(dict[str:int], bool):
     result_dict = {}
     profit = True
     for i in companies:
