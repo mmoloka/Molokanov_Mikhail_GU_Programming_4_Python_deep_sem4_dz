@@ -36,9 +36,9 @@ def withdraw_cash(amount_cash: int) -> bool:
         operations_count += 1
         if multiple_3(operations_count):
             sum_ += amount_cash * ACCRUED_INTEREST
-        if withdrawal_interest < 30:
-            sum_ -= amount_cash + 30
-        elif 30 <= withdrawal_interest <= 600:
+        if withdrawal_interest < LOWER_BOUND:
+            sum_ -= amount_cash + LOWER_BOUND
+        elif LOWER_BOUND <= withdrawal_interest <= UPPER_BOUND:
             sum_ -= amount_cash + withdrawal_interest
         else:
             sum_ -= amount_cash + 600
